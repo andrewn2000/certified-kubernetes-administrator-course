@@ -27,7 +27,7 @@ kubectl delete -f nginx.yaml
 
 # Better to first replace the config file rather than edit 
 
-# Declarative
+## Declarative
 
 kubectl apply -f nginx.yaml
 

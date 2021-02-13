@@ -52,6 +52,9 @@ Solutions to practice test daemonsets
 <details>
 
 vi ds.yaml
+```
+  $ kubectl kubectl create deployment elasticsearch --image=k8s.gcr.io/fluentd-elasticsearch:1.20 -dry-run -o yaml > elastic.yaml
+  ```
 
 
 ```

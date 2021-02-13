@@ -27,6 +27,7 @@ Solutions to practice test - node affinity
 
   ```
   $ kubectl label node node01 color=blue
+  $ kubectl get nodes node01 --show-labels
   ```
   </details>
 
@@ -37,6 +38,9 @@ Solutions to practice test - node affinity
   ```
   $ kubectl create deployment blue --image=nginx
   $ kubectl scale deployment blue --replicas=6
+
+  $kubectl create deployment blue --image=nginx --replicas=6
+
   ```
   </details>
 
@@ -55,6 +59,8 @@ Solutions to practice test - node affinity
   <details>
 
   ```
+  $ kubectl get deployments.apps blue -o yaml > blue.yaml
+  $ vi blue.yaml
   $ kubectl edit deployment blue
   ```
   </details>
@@ -91,6 +97,8 @@ Solutions to practice test - node affinity
    <details>
 
    ```
+   $ kubectl create deploymnet --image=nginx --dry-run -o yaml --replicas=3 > red.yaml
+
    affinity:
         nodeAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
@@ -100,7 +108,7 @@ Solutions to practice test - node affinity
                 operator: Exists
    ```
    ```
-   $ kubectl create -f red-deployment.yaml
+   $ kubectl create -f red.yaml
    ```
    ```
    $ kubectl get pods -o wide

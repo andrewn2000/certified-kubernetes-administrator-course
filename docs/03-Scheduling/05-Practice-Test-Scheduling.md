@@ -8,6 +8,7 @@ Solutions to Practice Test - Scheduling
 
   ```
   $ kubectl get pods --selector env=dev
+  $ kubectl get pods -l env=dev --no-headers | wc -l
   ```
   </details>
 
@@ -17,6 +18,7 @@ Solutions to Practice Test - Scheduling
 
   ```
   $ kubectl get pods --selector bu=finance
+  $ kubectl get pods -l env=finance --no-headers | wc -l
   ```
   </details>
 
@@ -26,6 +28,8 @@ Solutions to Practice Test - Scheduling
 
   ```
   $ kubectl get all --selector env=prod
+  $ kubectl get all --selector env=prod --no-headers | wc -l
+  
   ```
   </details>
 

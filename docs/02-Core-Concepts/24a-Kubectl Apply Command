@@ -1,0 +1,11 @@
+# Kubectl Apply Command
+  - Take me to [Practice Test](https://kodekloud.com/courses/539883/lectures/23273034)
+ ```
+live object configuration is created when you use apply Command
+
+yaml local file is converted to a json object as last applied configuration
+
+last applied configuration compares what changes were made from the local file to the live object configuration
+
+this stored in live object configuration
+ ```
